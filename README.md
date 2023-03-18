@@ -27,8 +27,8 @@ To run this project, you'll need the following software installed on your machin
 - Navigate into the project directory.
     - `cd movie-catalog-api`
 - Create the .env file.
-    - Copy the .env.example file to .env and edit the DATABASE_URL parameter to match your local database settings.
-        - `cp .env.example .env`
+    - Copy the .env file to .env.local and edit the DATABASE_URL parameter to match your local database settings.
+        - `cp .env .env.local`
 - Build and start the Docker containers.
     - `docker-compose up -d --build`
 - Install dependencies with Composer:
