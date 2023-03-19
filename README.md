@@ -23,9 +23,9 @@ To run this project, you'll need the following software installed on your machin
 ## Installing
 
 - Clone this repository to your local machine.
-    - `git clone https://github.com/your-username/movie-catalog-api.git`
+    - `git clone https://github.com/weslleyrichardc/movie-database-api.git`
 - Navigate into the project directory.
-    - `cd movie-catalog-api`
+    - `cd movie-database-api`
 - Create the .env file.
     - Copy the .env file to .env.local and edit the DATABASE_URL parameter to match your local database settings.
         - `cp .env .env.local`
@@ -38,28 +38,9 @@ To run this project, you'll need the following software installed on your machin
 - **(Optional)** Load some test data.
     - `docker-compose exec php bin/console doctrine:fixtures:load`
 
-You should now be able to access the API at http://localhost:8000.
+You should now be able to access the API at [localhost](http://localhost).
 
-## API Endpoints
-
-### GET /movies
-
-Returns a list of all movies in the database.
-
-### GET /movies/{id}
-
-Returns information about a specific movie.
-
-### POST /movies
-
-Adds a new movie to the database.
-
-#### Parameters
-|Parameter	| Type | Description |
-|----------|:-------------:|:------|
-|title	| string | **Required.** The title of the movie. |
-|category	| string | **Required.** The category of the movie. |
-|release_date	| date | **Required.** The release date of the movie. |
+## [API Endpoints](http://localhost/api)
 
 ## Running Tests
 
