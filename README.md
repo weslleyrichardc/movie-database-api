@@ -18,25 +18,26 @@ These instructions will get you a copy of the project up and running on your loc
 To run this project, you'll need the following software installed on your machine:
 
 - [**Docker**](https://docs.docker.com/get-docker/)
-    - Docker Compose
+  - Docker Compose
 
 ## Installing
 
 - Clone this repository to your local machine.
-    - `git clone https://github.com/weslleyrichardc/movie-database-api.git`
+  - `git clone https://github.com/weslleyrichardc/movie-database-api.git`
 - Navigate into the project directory.
-    - `cd movie-database-api`
-- Create the .env file.
-    - Copy the .env file to .env.local and edit the DATABASE_URL parameter to match your local database settings.
-        - `cp .env .env.local`
+  - `cd movie-database-api`
+- **(Optional)** Create the .env.local file for local changes.
+  - `cp .env .env.local`
+- **(Optional)** Create the docker-compose.override.yml file for local changes.
+  - `cp docker-compose.yml docker-compose.override.yml`
 - Build and start the Docker containers.
-    - `docker-compose up -d --build`
+  - `docker compose up -d --build`
 - Install dependencies with Composer:
-    - `docker-compose exec php composer install`
+  - `docker compose exec php composer install`
 - Create the database schema.
-    - `docker-compose exec php bin/console doctrine:schema:create`
+  - `docker compose exec php bin/console doctrine:schema:create`
 - **(Optional)** Load some test data.
-    - `docker-compose exec php bin/console doctrine:fixtures:load`
+  - `docker compose exec php bin/console doctrine:fixtures:load`
 
 You should now be able to access the API at [localhost](http://localhost).
 
