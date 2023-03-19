@@ -26,9 +26,10 @@ To run this project, you'll need the following software installed on your machin
   - `git clone https://github.com/weslleyrichardc/movie-database-api.git`
 - Navigate into the project directory.
   - `cd movie-database-api`
-- Create the .env file.
-  - Copy the .env file to .env.local and edit the DATABASE_URL parameter to match your local database settings.
-    - `cp .env .env.local`
+- **(Optional)** Create the .env.local file for local changes.
+  - `cp .env .env.local`
+- **(Optional)** Create the docker-compose.override.yml file for local changes.
+  - `cp docker-compose.yml docker-compose.override.yml`
 - Build and start the Docker containers.
   - `docker compose up -d --build`
 - Install dependencies with Composer:
