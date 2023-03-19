@@ -34,8 +34,10 @@ To run this project, you'll need the following software installed on your machin
   - `docker compose up -d --build`
 - Install dependencies with Composer:
   - `docker compose exec php composer install`
-- Create the database schema.
-  - `docker compose exec php bin/console doctrine:schema:create`
+- Create the database.
+  - `docker compose exec php bin/console doctrine:database:create`
+- Create all the tables using the migrations.
+  - `docker compose exec php bin/console doctrine:migrations:migrate`
 - **(Optional)** Load some test data.
   - `docker compose exec php bin/console doctrine:fixtures:load`
 
