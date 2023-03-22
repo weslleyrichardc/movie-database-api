@@ -29,6 +29,15 @@ class Movie
     #[ORM\Column]
     private ?\DateTimeImmutable $updated_at = null;
 
+    #[ORM\Column(length: 4)]
+    private ?string $year = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $director = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $synopsis = null;
+
     public function __construct()
     {
         $this->category = new ArrayCollection();
@@ -95,6 +104,42 @@ class Movie
     public function setUpdatedAt(\DateTimeImmutable $updated_at): self
     {
         $this->updated_at = $updated_at;
+
+        return $this;
+    }
+
+    public function getYear(): ?string
+    {
+        return $this->year;
+    }
+
+    public function setYear(string $year): self
+    {
+        $this->year = $year;
+
+        return $this;
+    }
+
+    public function getDirector(): ?string
+    {
+        return $this->director;
+    }
+
+    public function setDirector(string $director): self
+    {
+        $this->director = $director;
+
+        return $this;
+    }
+
+    public function getSynopsis(): ?string
+    {
+        return $this->synopsis;
+    }
+
+    public function setSynopsis(string $synopsis): self
+    {
+        $this->synopsis = $synopsis;
 
         return $this;
     }
