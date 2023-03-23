@@ -66,6 +66,9 @@ class MovieController extends AbstractController
 
         $movie = $movieRepository->find($id);        
         $movie->setTitle($data['title']);
+        $movie->setYear($data['year']);
+        $movie->setDirector($data['director']);
+        $movie->setSynopsis($data['synopsis']);
         $movie->setUpdatedAt(new \DateTimeImmutable('now', new \DateTimeZone('America/Sao_Paulo')));
 
         $movieRepository->save($movie, true);

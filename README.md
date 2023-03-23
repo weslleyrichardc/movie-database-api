@@ -43,7 +43,32 @@ To run this project, you'll need the following software installed on your machin
 
 You should now be able to access the API at [localhost](http://localhost).
 
-## [API Endpoints](http://localhost/api)
+## API Documentation
+
+- /api/categorias - GET
+- /api/categorias - POST
+  - **Request Body**
+    - `name` - string
+- /api/categorias/{id} - GET
+- /api/categorias/{id} - PUT
+  - **Request Body**
+    - `name` - string
+- /api/categorias/{id} - DELETE
+- /api/filmes - GET
+- /api/filmes - POST
+  - **Request Body**
+    - `title` - string
+    - `year` - string
+    - `director` - string
+    - `synopsis` - string
+- /api/filmes/{id} - GET
+- /api/filmes/{id} - PUT
+  - **Request Body**
+    - `title` - string
+    - `year` - string
+    - `director` - string
+    - `synopsis` - string
+- /api/filmes/{id} - DELETE
 
 ## Running Tests
 
